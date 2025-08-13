@@ -1,0 +1,22 @@
+name: FER_ENV
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.9
+  - opencv=4.12.0
+  - numpy=1.26.4
+  - pillow=11.3.0
+  - matplotlib=3.9.4
+  - seaborn=0.13.2
+  - pandas=2.3.1
+  - scipy=1.13.1
+  - pip
+  - pip:
+    - deepface==0.0.95
+    - mediapipe==0.10.21
+    - streamlit==1.48.1
+    - tensorflow==2.19.1
+    - keras==3.10.0
+    - tf-keras==2.19.0
+    - scikit-learn==1.3.0
