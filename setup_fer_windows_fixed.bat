@@ -1,7 +1,7 @@
 @echo off
 setlocal enabledelayedexpansion
 
-REM 🎭 FER Project Windows Setup Script
+REM 🎭 FER Project Windows Setup Script (Fixed Version)
 REM This script will create and configure your FER environment on Windows
 
 echo.
@@ -14,7 +14,7 @@ REM Set title
 title FER Project Setup - Windows
 
 REM Check if running as administrator
-net session >nul 2>&1
+net session >nul 2>nul
 if %errorLevel% == 0 (
     echo ✅ Running with administrator privileges
 ) else (
@@ -64,7 +64,7 @@ conda env list | findstr "FER_ENV" >nul 2>nul
 if %errorLevel% equ 0 (
     echo ⚠️  FER_ENV environment already exists!
     echo.
-    set /p choice="Do you want to remove it and recreate? (y/N): "
+    set /p choice="Do you want to remove it and recreate? (y/n): "
     if /i "!choice!"=="y" (
         echo 🗑️  Removing existing FER_ENV...
         conda env remove -n FER_ENV -y
